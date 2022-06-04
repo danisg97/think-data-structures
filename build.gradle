@@ -10,8 +10,10 @@ repositories {
 dependencies {
     implementation 'org.apache.logging.log4j:log4j-core:2.17.0'
     implementation 'com.vlkan.log4j2:log4j2-logstash-layout:1.0.5'
+    implementation 'junit:junit:4.13.2'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testImplementation 'org.assertj:assertj-core:3.22.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
