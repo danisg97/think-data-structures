@@ -107,7 +107,12 @@ public class MyArrayList<T> implements List<T> {
 
     @Override
     public int indexOf(Object target) {
-        // TODO: FILL THIS IN!
+        for (int i = 0; i < size; i++) {
+            if (equals(target, array[i])) {
+                return i;
+            }
+        }
+
         return -1;
     }
 
@@ -179,8 +184,12 @@ public class MyArrayList<T> implements List<T> {
 
     @Override
     public T remove(int index) {
-        // TODO: FILL THIS IN!
-        return null;
+        T element = get(index);
+        for (int i = index; i < size - 1; i++) {
+            array[i] = array[i + 1];
+        }
+        size--;
+        return element;
     }
 
     @Override
