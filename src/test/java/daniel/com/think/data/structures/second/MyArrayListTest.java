@@ -232,46 +232,7 @@ public class MyArrayListTest {
         myList.removeAll(list);
         assertThat(myList.size()).isEqualTo(0);
     }
-
-    /**
-     * Test method for {@link MyArrayList#set(int, Object)}.
-     */
-    @Test
-    public void testSet() {
-        Integer val = myList.set(1, 5);
-        assertThat(val).isEqualTo(new Integer(5));
-        // assertThat(val).isEqualTo(new Integer(2));
-
-        val = myList.set(0, 6);
-        assertThat(val).isEqualTo(new Integer(6));
-        // assertThat(val).isEqualTo(new Integer(1));
-
-        val = myList.set(2, 7);
-        assertThat(val).isEqualTo(new Integer(7));
-        // assertThat(val).isEqualTo(new Integer(3));
-
-        // return value should be 2
-        // list should be [6, 5, 7]
-        assertThat(myList.get(0)).isEqualTo(new Integer(6));
-        assertThat(myList.get(1)).isEqualTo(new Integer(5));
-        assertThat(myList.get(2)).isEqualTo(new Integer(7));
-        //System.out.println(Arrays.toString(mal.toArray()));
-
-        try {
-            myList.set(-1, 0);
-            fail();
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println("Good!");
-        } // good
-
-        try {
-            myList.set(4, 0);
-            fail();
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println("Good!");
-        } // good
-    }
-
+        
     /**
      * Test method for {@link MyArrayList#size()}.
      */
